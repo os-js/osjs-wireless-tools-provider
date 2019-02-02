@@ -34,6 +34,21 @@ const {WirelessToolsServiceProvider} = require('@osjs/wireless-tools-provider/sr
 osjs.register(WirelessToolsServiceProvider);
 ```
 
+## Configuration
+
+By default the server provider is set up to only allow users with the `admin` group to access this feature.
+
+You can change this by adding options:
+
+```javascript
+const {WirelessToolsServiceProvider} = require('@osjs/wireless-tools-provider/src/server.js');
+core.register(ProcServiceProvider, {
+  args: {
+    groups: ['other-group']
+  }
+});
+```
+
 ## API
 
 Simply use `core.make('osjs/wireless-tools').call('namespace', 'method', ...args)` and you will get a `Promise<any, Error>`.

@@ -122,7 +122,7 @@ class WirelessToolsServiceProvider {
   init() {
     const {routeAuthenticated} = this.core.make('osjs/express');
 
-    routeAuthenticated('POST', `/api/wireless-tools/subscribe/:ns/:method`, (req, res) => {
+    routeAuthenticated('POST', '/api/wireless-tools/subscribe/:ns/:method', (req, res) => {
       const args = req.body.args || [];
       const id = req.body.id;
       const {ns, method} = req.params;
@@ -133,12 +133,12 @@ class WirelessToolsServiceProvider {
       res.json({success});
     });
 
-    routeAuthenticated('POST', `/api/wireless-tools/unsubscribe/:uuid`, (req, res) => {
+    routeAuthenticated('POST', '/api/wireless-tools/unsubscribe/:uuid', (req, res) => {
       const success = this.subscriptions.remove(req.params.uuid);
       res.json({success});
     });
 
-    routeAuthenticated('POST', `/api/wireless-tools/:ns/:method`, (req, res) => {
+    routeAuthenticated('POST', '/api/wireless-tools/:ns/:method', (req, res) => {
       const args = req.body.args || [];
       const {ns, method} = req.params;
 
@@ -147,8 +147,8 @@ class WirelessToolsServiceProvider {
         .catch(error => {
           console.warn(error);
           res.status(400).json({error: error.toString()});
-        })
-    }, this.options.groups)
+        });
+    }, this.options.groups);
 
     this.core.singleton('osjs/wireless-tools', () => wireless_tools);
 

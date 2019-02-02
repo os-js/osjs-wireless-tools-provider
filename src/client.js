@@ -140,7 +140,7 @@ class WifiTrayIcon {
       }, {
         label: 'Disconnect'
       }]
-    })
+    });
   }
 }
 

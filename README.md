@@ -42,7 +42,7 @@ You can change this by adding options:
 
 ```javascript
 const {WirelessToolsServiceProvider} = require('@osjs/wireless-tools-provider/src/server.js');
-core.register(WirelessToolsServiceProvider, {
+osjs.register(WirelessToolsServiceProvider, {
   args: {
     groups: ['other-group']
   }

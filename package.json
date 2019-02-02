@@ -1,6 +1,6 @@
 {
   "name": "@osjs/wireless-tools-provider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "OS.js v3 wireless-tools Provider",
   "main": "dist/main.js",
   "scripts": {

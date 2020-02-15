@@ -30,19 +30,11 @@
   },
   "homepage": "https://github.com/andersevenrud/osjs-wireless-tools-provider#readme",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/runtime": "^7.1.2",
-    "@osjs/eslint-config": "^1.0.0",
-    "@osjs/event-emitter": "^1.0.4",
-    "babel-loader": "^8.0.4",
-    "eslint": "^5.6.1",
-    "uuid": "^3.3.2",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "@osjs/dev-meta": "^1.0.2"
   },
   "dependencies": {
+    "@osjs/event-emitter": "^1.0.4",
+    "uuid": "^3.3.2",
     "wireless-tools": "^0.19.0"
   },
   "eslintConfig": {
